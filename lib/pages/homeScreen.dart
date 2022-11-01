@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:game/pages/mathpuzzleScreen.dart';
 import 'package:game/widgets/homescreen_appbar.dart';
 import 'package:game/widgets/homescreen_mathpuzzle.dart';
 import 'package:game/widgets/homescreen_memorypuzzle.dart';
 import 'package:game/widgets/homescreen_trainyourbrain.dart';
-import 'package:game/widgets/texts.dart';
+import 'package:game/widgets/homescreen_texts.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,13 +24,20 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 15,left: 15,top: 15),
+              padding: const EdgeInsets.only(right: 20,left: 20
+              ,top: 30),
               child: AppBarHome(),
             ),
             SizedBox(height: 40,),
             Texts(),
             SizedBox(height: 40,),
-            MathPuzzleButton(),
+            GestureDetector(
+              onTap: (() {
+               Navigator.push(context, 
+               MaterialPageRoute(builder: ((context) => MathPuzzleScreen()))
+               );
+              }),
+              child: MathPuzzleButton()),
             SizedBox(height: 40,),
             MemoryPuzzleButton(),
             SizedBox(height: 40,),
