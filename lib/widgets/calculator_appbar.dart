@@ -19,20 +19,52 @@ class _AppBarCalculatorState extends State<AppBarCalculator> {
       child: Container(
         width: MediaQuery.of(context).size.width,
         height: 50,
-       
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
-           color: Colors.red,
+          gradient: LinearGradient(colors: [
+            Colors.purple,
+            Colors.pink
+
+          ]),
+          
         ),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: BackwardButton(),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: BackwardButton(),
+            ),
+           
+            Row(
+              children: [
+                Image.asset(
+                  "assets/images/champ.png",
+                  height: 25,
+                  width: 25,
+                ),
+                Text(
+              "0",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500),
+            ),
+              ],
+            ),
+            
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: Colors.white,
+                ),
+               child: Icon(Icons.pause_outlined),
               ),
-              SizedBox(width: 100,),
-              Image.asset("assets/images/champ.png",height: 25,width: 25,),
-              Text("0",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w500),)    
+            )
           ],
         ),
       ),
