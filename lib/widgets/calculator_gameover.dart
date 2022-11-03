@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import '../pages/calculator.dart';
+
 class CalculatorGameOver extends StatefulWidget {
   const CalculatorGameOver({super.key});
 
@@ -39,7 +41,7 @@ class _CalculatorGameOverState extends State<CalculatorGameOver> {
                 padding: const EdgeInsets.only(top: 8,left: 35),
                 child: GestureDetector(
                   onTap: (() {
-                    
+            
                   }),
                   child: Container(
                     alignment: Alignment.center,

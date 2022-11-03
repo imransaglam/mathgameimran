@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:game/widgets/calculator_time.dart';
 
 import 'mathpuzzleScreen_backward.dart';
 
@@ -16,7 +17,16 @@ class _AppBarCalculatorState extends State<AppBarCalculator> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
+      child:Stack(
+        children: [
+          Container(width:MediaQuery.of(context).size.width,
+          height: 58,
+          //color: Colors.red,
+          ),
+          Positioned(
+            top:40,
+            child: TimerCalculator()),
+           Container(
         width: MediaQuery.of(context).size.width,
         height: 50,
         decoration: BoxDecoration(
@@ -68,6 +78,8 @@ class _AppBarCalculatorState extends State<AppBarCalculator> {
           ],
         ),
       ),
+        ],
+      )
     );
   }
 }

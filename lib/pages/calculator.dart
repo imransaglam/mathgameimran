@@ -44,12 +44,12 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Column(
         children: [
           AppBarCalculator(),
-          TimerCalculator(),
+         // TimerCalculator(),
           CalculatorInfo(),
           CalculatorText(),
           CalculatorInput(),
           Container(
-            width: 250,
+            width: 300,
             height: 500,
             child:GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -59,9 +59,9 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                           itemCount: numbers.length
                 , itemBuilder: ((context, index) {
                   return Container(
-                    padding: EdgeInsets.only(top: 15),
-                            height: 30,
-                            width: 30,
+                    
+                            height: 60,
+                            width: 60,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               color: Color(0xffD9D9D9).withOpacity(0.05),
@@ -69,7 +69,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
                   ),
                   child: Container(
                     alignment: Alignment.center,
-                    child: Text(numbers[index],style: TextStyle(color: Colors.white),)),
+                    child: Text(numbers[index],style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.w500),)),
                   );
                   
                 })),

@@ -15,12 +15,14 @@ class _TimerCalculatorState extends State<TimerCalculator> {
   Widget build(BuildContext context) {
     return Container(
       width:MediaQuery.of(context).size.width ,
-      height: 40,
-      //color: Colors.green,
+    
       child: LinearPercentIndicator(
+        barRadius: Radius.circular(15),
+        
+     isRTL: true,
         animation: true,
         animationDuration: 60000,
-        lineHeight: 20.0,
+        lineHeight: 80.0,
         percent: 1,
         progressColor: Colors.deepPurple,
         backgroundColor: Colors.deepPurple.shade200,

@@ -18,7 +18,8 @@ class _CalculatorInputState extends State<CalculatorInput> {
       height: 50,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.purple[700]
+        color: Colors.purple.withOpacity(0.6),
+        
       ),
     );
   }
