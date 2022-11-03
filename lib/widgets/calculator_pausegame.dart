@@ -18,34 +18,67 @@ class _CalculatorPauseGameState extends State<CalculatorPauseGame> {
       child: Align(
         alignment: Alignment.center,
         child: Container(
-          width: 250,
-          height: 250,
+           width: 230,
+          height: 120,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Colors.grey,
           ),
           child: Column(
             children: [
-              Text("Do you want to exit?",style: TextStyle(color: Colors.white),),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text("Do you want to exit?",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w600),),
+              ),
+               Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Text("Your score is",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+              ),
               Row(
                 children: [
-                  Container(
-                width: 80,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
+                  Padding(
+                padding: const EdgeInsets.only(top: 8,left: 35),
+                child: GestureDetector(
+                  onTap: (() {
+                    
+                  }),
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: 100,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: LinearGradient(colors: [
+                        Colors.deepPurple,
+                        Colors.purple
+                      ])
+                    ),
+                    child: Text("CANCEL",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+                  ),
                 ),
-                child: Text("Cancel",style: TextStyle(color: Colors.white),),
               ),
-               Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.orange,
-                ),
-                child: Container(
-                  child: Text("Yes",style: TextStyle(color: Colors.white),)),
-              ),
+               Padding(
+              padding: const EdgeInsets.only(top: 8,left: 20),
+                 child: GestureDetector(
+                  onTap: (() {
+                    
+                  }),
+                   child: Container(
+                    alignment: Alignment.center,
+                    width: 50,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: LinearGradient(colors: [
+                        Colors.deepPurple,
+                        Colors.purple
+                      ])
+                    ),
+                    child: Container(
+                      child: Text("YES",style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.w500),)),
+                               ),
+                 ),
+               ),
       
                 ],
               )

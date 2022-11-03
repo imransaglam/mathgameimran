@@ -24,35 +24,67 @@ class _CalculatorInfoState extends State<CalculatorInfo> {
           GestureDetector(
             onTap: () {
               showModalBottomSheet(context: context,
-          
+              backgroundColor: Colors.deepPurpleAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(24),
+                  topRight: Radius.circular(24)
+                )
+              ),
                builder: (BuildContext context) {
-                 return Container(
-                  color: Colors.black,
-             
-                  height: 400,
-                  child: GestureDetector(
+                 return Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Quick Calculation",style: TextStyle(color:Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Container(
+                        width: 350,
+                        height: 200,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(image: AssetImage("assets/images/calculator_intro.gif"),
+                            fit: BoxFit.fill,
+                          )
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text("Solve simple equation one by one.",style: TextStyle(color:Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+                    ),
+                    Text("Faster you solve,more time will be",style: TextStyle(color:Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+                    Text("given to solve next equation.",style: TextStyle(color:Colors.white,fontSize: 18,fontWeight: FontWeight.w500),),
+
+                     Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                       child: Text("  1.0 for correct answer",style: TextStyle(color:Colors.white,fontSize: 18,fontWeight: FontWeight.w600),),
+                     ),
+                     Padding(
+                       padding: const EdgeInsets.only(bottom: 10),
+                       child: Text("-1.0 for wrong answer",style: TextStyle(color:Colors.white,fontSize: 18,fontWeight: FontWeight.w600),),
+                     ),
+                    GestureDetector(
                     onTap: () {
                       Navigator.pop(context);
                     },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: Colors.deepPurpleAccent,
-                      ),
-                      
-                      width: 50,
-                      height: 50,
                       child: Center(
                         child: Container(
                           alignment: Alignment.center,
-                        width:100,height: 50,
+                        width:200,height: 40,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.green,
+                        gradient: LinearGradient(colors: [
+                          Colors.pink,
+                          Colors.pinkAccent
+                        ])
                       ),
-                        child: Text("Close",style: TextStyle(color:Colors.white),))),
+                        child: Text("Close",style: TextStyle(color:Colors.white,fontSize: 20,fontWeight: FontWeight.w500),))),
                     ),
-                  ),
+                  ],
+                  
                  );
                }
                );
