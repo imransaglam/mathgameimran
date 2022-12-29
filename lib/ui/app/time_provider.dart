@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:game/ui/app/app_constant.dart';
+import 'package:game/core/app_constant.dart';
 
 class TimeProvider with ChangeNotifier {
   TimeProvider({required TickerProvider vsync, required this.totalTime}) {
